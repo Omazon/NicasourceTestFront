@@ -1,6 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import "styles/animation.css";
 @import "styles/utilities.css";
 @import 'lightgallery/css/lightgallery.css';
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
 /*header*/
 .image-rotate {
     animation: rotate 20s ease 0s infinite normal both;
