@@ -1,0 +1,36 @@
+/*utilities*/
+.spacer-100{
+    height: 100px;
+}
+.spacer-50{
+    height: 50px;
+}
+.red-line-title{
+    height: 1px;
+    background-color: #F13C45;
+    width: 20px;
+}
+.font-size-50{
+    font-size: 50px;
+}
+p{
+    font-weight: 500;
+}
+.hover-shadow{
+    transition: box-shadow 0.3s ease-in-out;
+}
+.hover-shadow:hover{
+    box-shadow: 5px 5px 20px -5px #000000;
+}
+.mt-50-reverse{
+    margin-top: -50px;
+}
+.mt-n10{
+    margin-top: -10px;
+}
+.r-15p{
+    right: 15%;
+}
+.fadeInLeft{
+    animation: fadeInLeft 1s ease 0s 1 normal both;
+}

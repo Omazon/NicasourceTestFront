@@ -1,0 +1,66 @@
+@import "styles/animation.css";
+@import "styles/utilities.css";
+@import 'lightgallery/css/lightgallery.css';
+/*header*/
+.image-rotate {
+    animation: rotate 20s ease 0s infinite normal both;
+}
+.nav-item .nav-link.active{
+    color: #F13C45 !important;
+    font-weight: normal;
+}
+.nav-item .active-line {
+    height: 1px;
+    background-color: black;
+    width: 60%;
+    margin: auto;
+}
+/*lg*/
+@media (min-width: 992px){
+    .position-lg-absolute{
+        position: absolute;
+    }
+}
+/*hero*/
+/*Blog Post*/
+.splide__arrow{
+    background: transparent !important;
+}
+/*gallery*/
+.image{
+    position: relative;
+}
+.image .image-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s opacity linear;
+    filter: brightness(1);
+    opacity: 0;
+}
+.image img {
+    filter: brightness(1);
+    transition: 0.25s filter linear;
+}
+.image:hover img{
+    filter: brightness(0.34) ;
+}
+.image:hover .image-overlay{
+    opacity: 1;
+}
+.image-container{
+    columns: 4 250px;
+    gap: 0;
+}
+.image-container img{
+    width: 100%;
+    /*height: 100%;*/
+}
+.black-transparent{
+    background-color: rgba(0, 0, 0, 0.36);
+    padding: 20px 17px;
+    border-radius: 50%;
+}
