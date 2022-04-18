@@ -10,6 +10,7 @@ import FontAwesomeIcon from './components/fontawesome-icons'
 import Lightgallery from 'lightgallery/vue';
 import 'aos/dist/aos.css'
 import AOS from 'aos'
+import store from './store';
 
 AOS.init({
     once: true
@@ -17,4 +18,5 @@ AOS.init({
 createApp(App)
     .component('font-awesome-icon',FontAwesomeIcon)
     .component('Lightgallery',Lightgallery)
+    .use(store)
     .mount('#app')

@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import {useStore} from 'vuex';
 
+const store = useStore();
+const count = store.getters.menu;
 </script>
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -13,7 +16,7 @@
       <div class="collapse navbar-collapse d-lg-flex justify-content-lg-center position-relative" id="navbarScroll">
         <ul class="navbar-nav my-2 my-lg-0 me-5" style="--bs-scroll-height: 100px;">
           <li class="nav-item mx-2">
-            <a class="nav-link active text-dark" aria-current="page" href="#">Home</a>
+            <a class="nav-link active text-dark" aria-current="page" href="#">{{ count }}</a>
             <div class="active-line"></div>
           </li>
           <li class="nav-item mx-2">
