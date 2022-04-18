@@ -28,7 +28,7 @@ function dateFormat(date){
     </div>
     <div class="col-md-3 p-3 d-flex flex-column justify-content-center">
       <div class="border-start ps-5 py-3">
-        <p class="text-muted" v-for="category in props.data.categories.nodes"># {{ category.name }}</p>
+        <p class="text-muted" v-for="category in props.data.categories.nodes" :key="category.name"># {{ category.name }}</p>
         <p class="text-muted"># Posted on {{dateFormat(props.date)}}</p>
         <p class="text-muted"># audio / goodbyes / life</p>
       </div>
