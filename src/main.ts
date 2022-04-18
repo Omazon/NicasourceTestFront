@@ -11,6 +11,9 @@ import Lightgallery from 'lightgallery/vue';
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import store from './store';
+import {DefaultApolloClient} from '@vue/apollo-composable';
+import apolloClient from './client';
+import Vue3SmoothScroll from 'vue3-smooth-scroll';
 
 AOS.init({
     once: true
@@ -19,4 +22,6 @@ createApp(App)
     .component('font-awesome-icon',FontAwesomeIcon)
     .component('Lightgallery',Lightgallery)
     .use(store)
+    .use(Vue3SmoothScroll)
+    .provide(DefaultApolloClient, apolloClient)
     .mount('#app')

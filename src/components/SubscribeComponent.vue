@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="subscribe">
     <div class="spacer-100"></div>
     <h2 class="text-center">
       New Episode Every Week!

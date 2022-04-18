@@ -23,6 +23,7 @@
     "lightgallery": "^2.4.0",
     "remove": "^0.1.5",
     "vue": "^3.2.25",
+    "vue3-smooth-scroll": "^0.8.1",
     "vuex": "^4.0.2"
   },
   "devDependencies": {

@@ -8,6 +8,13 @@ import BlogComponent from './components/BlogComponent.vue'
 import GalleryComponent from './components/GalleryComponent.vue'
 import SubscribeComponent from './components/SubscribeComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
+import {onMounted} from 'vue';
+import {useStore} from 'vuex';
+
+const store = useStore()
+onMounted(async()=>{
+  await store.dispatch('getHome');
+})
 </script>
 
 <template>
