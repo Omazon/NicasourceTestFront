@@ -23,8 +23,8 @@ const optionPage = computed(()=>{
       </button>
       <div class="collapse navbar-collapse d-lg-flex justify-content-lg-center position-relative" id="navbarScroll">
         <ul class="navbar-nav my-2 my-lg-0 me-5" style="--bs-scroll-height: 100px;">
-          <li class="nav-item mx-2" v-for="(item, index) in menu.menuItems.edges" :key="item.node.id">
-            <a class="nav-link text-dark" :class="index===0 ? 'active' : 'fw-bold'" aria-current="page" href="#">{{ item.node.label }}</a>
+          <li class="nav-item mx-2" v-for="(item, index) in menu.menuItems.nodes" :key="item.id">
+            <a class="nav-link text-dark" :class="index===0 ? 'active' : 'fw-bold'" aria-current="page" href="#">{{ item.label }}</a>
             <div v-if="index===0" class="active-line"></div>
           </li>
         </ul>

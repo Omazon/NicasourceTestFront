@@ -14,8 +14,27 @@ const store = createStore({
             optionPage: {
                 logo:{
                     sourceUrl:''
+                },
+                spotify:{
+                    sourceUrl:''
+                },
+                apple:{
+                    sourceUrl:''
+                },
+                google:{
+                    sourceUrl:''
+                },
+            },
+            home:{
+                hero:{
+                    description:'',
+                    rightImage: {
+                        sourceUrl: ''
+                    },
+                    title:''
                 }
-            }
+            },
+            podcasts:[]
         }
     },
     mutations: {
@@ -26,15 +45,25 @@ const store = createStore({
         setOptionPage (state, payload) {
             // @ts-ignore
             state.optionPage = payload;
+        },
+        setHome (state, payload){
+            // @ts-ignore
+            state.home = payload;
+        },
+        setPodcast (state, payload){
+            // @ts-ignore
+            state.podcasts = payload;
         }
     },
     actions: {
-        async getHome ({commit}){
+        async addHome ({commit}){
             try {
                 const {result, loading, error} = await useQuery(home);
                 watch(result, value => {
                     commit('setMenu', value.menu);
                     commit('setOptionPage', value.themeGeneralSettings.generalOption);
+                    commit('setHome', value.nodeByUri);
+                    commit('setPodcast', value.podcasts)
                 })
 
             } catch (error){
@@ -50,6 +79,14 @@ const store = createStore({
         optionPage (state){
             // @ts-ignore
             return state.optionPage;
+        },
+        getHero(state){
+            // @ts-ignore
+            return state.home.hero
+        },
+        getPodcasts (state){
+            // @ts-ignore
+            return state.podcasts
         }
     }
 });

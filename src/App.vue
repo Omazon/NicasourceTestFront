@@ -13,7 +13,7 @@ import {useStore} from 'vuex';
 
 const store = useStore()
 onMounted(async()=>{
-  await store.dispatch('getHome');
+  await store.dispatch('addHome');
 })
 </script>
 
