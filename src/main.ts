@@ -14,7 +14,8 @@ import {DefaultApolloClient} from '@vue/apollo-composable';
 import apolloClient from './client';
 import Vue3SmoothScroll from 'vue3-smooth-scroll';
 import VueSplide from '@splidejs/vue-splide';
-
+import VueEasyLightbox from 'vue-easy-lightbox/dist/external-css/vue-easy-lightbox.es5.esm.min.js'
+import 'vue-easy-lightbox/dist/external-css/vue-easy-lightbox.css'
 AOS.init({
     once: true
 });
@@ -24,5 +25,6 @@ createApp(App)
     .use(store)
     .use( VueSplide )
     .use(Vue3SmoothScroll)
+    .use(VueEasyLightbox)
     .provide(DefaultApolloClient, apolloClient)
     .mount('#app')
