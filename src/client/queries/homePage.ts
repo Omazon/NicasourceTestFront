@@ -15,6 +15,7 @@ nodeByUri(uri: "/") {
           mediaItemUrl
         }
       }
+       content
     }
 }
 `;

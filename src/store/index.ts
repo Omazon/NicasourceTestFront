@@ -34,7 +34,8 @@ const store = createStore({
                 },
                 gallery:{
                     image:[]
-                }
+                },
+                content:''
             },
             podcasts:[],
             posts:[]
@@ -103,6 +104,10 @@ const store = createStore({
         getPosts (state){
             // @ts-ignore
             return state.posts
+        },
+        getContent(state){
+            // @ts-ignore
+            return state.home.content;
         }
     }
 });
