@@ -12,50 +12,30 @@ const store = useStore();
 const posts = computed(()=>{
   return store.getters.getPosts;
 })
-// document.addEventListener( 'DOMContentLoaded', function() {
-//   let splide = new Splide('.splide',{
-//     perPage: 3,
-//     type: 'loop',
-//     perMove: 1,
-//     gap: '3rem',
-//     interval: 5000,
-//     autoplay: true,
-//     pagination: false,
-//     breakpoints: {
-//       992: {
-//         perPage: 2
-//       },
-//       768: {
-//         perPage: 1
-//       }
-//     }
-//   });
-//   splide.mount();
-// } );
-
+const options = {
+  perPage: 3,
+  type: 'loop',
+  perMove: 1,
+  gap: '3rem',
+  interval: 5000,
+  autoplay: true,
+  pagination: false,
+  breakpoints: {
+    992: {
+      perPage: 2
+    },
+    768: {
+      perPage: 1
+    }
+  }
+};
 </script>
 <template>
   <section>
     <div class="spacer-100"></div>
     <div class="container">
       <h2 class="text-center mb-5">Blog Post</h2>
-      <Splide :has-track="false" :options="{
-        perPage: 3,
-        type: 'loop',
-        perMove: 1,
-        gap: '3rem',
-        interval: 5000,
-        autoplay: true,
-        pagination: false,
-        breakpoints: {
-          992: {
-            perPage: 2
-          },
-          768: {
-            perPage: 1
-          }
-        }
-      }" aria-label="Blog Post">
+      <Splide :has-track="false" :options="options" aria-label="Blog Post">
         <SplideTrack>
           <SplideSlide v-for="post in posts.nodes" :key="post.id">
             <PostComponent :data="post"/>

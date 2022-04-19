@@ -7,7 +7,6 @@ const store = useStore();
 const podcasts = computed(()=>{
   return store.getters.getPodcasts;
 })
-
 </script>
 <template>
   <section class="container p-5 bg-white mt-50-reverse shadow">
