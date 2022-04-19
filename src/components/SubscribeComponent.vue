@@ -12,7 +12,7 @@ const messageIsVisible = ref(false);
 async function sendEmail(){
   let formData = new FormData();
   formData.set("email", email.value);
-  const result = await axios.post('http://nicasourcewp.local/wp-json/contact-form-7/v1/contact-forms/74/feedback',formData);
+  const result = await axios.post('https://wpvue.bytfm.com/wp-json/contact-form-7/v1/contact-forms/74/feedback',formData);
   message.value = result.data.message;
   messageIsVisible.value = true;
 }
