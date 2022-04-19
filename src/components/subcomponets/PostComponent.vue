@@ -1,3 +1,10 @@
+<script setup lang="ts">
+  const props = defineProps({
+    data: {
+      required: true
+    }
+  })
+</script>
 <template>
   <div class="card border-light shadow py-4 my-3">
     <div class="meta">

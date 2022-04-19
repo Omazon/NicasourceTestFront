@@ -1,67 +1,17 @@
 import gql from 'graphql-tag';
+import menu from './queries/menu'
+import themeSettings from './queries/themeSettings';
+import homePage from './queries/homePage';
+import podcasts from './queries/podcasts';
+import posts from './queries/posts';
 
 const home = gql`
     query home {
-        menu(idType: NAME, id: "Main") {
-            menuItems {
-                nodes {
-                    label
-                    id
-                }
-            }
-        }
-        themeGeneralSettings {
-            generalOption {
-                logo {
-                    sourceUrl
-                }
-                apple {
-                    sourceUrl
-                }
-                spotify {
-                    sourceUrl
-                }
-                google {
-                    sourceUrl
-                }
-            }
-        }
-        nodeByUri(uri: "/") {
-            ... on Page {
-                id
-                hero {
-                    description
-                    rightImage {
-                        sourceUrl
-                    }
-                    title
-                }
-            }
-        }
-        podcasts {
-            nodes {
-                title
-                excerpt
-                categories {
-                    nodes {
-                        name
-                    }
-                }
-                link
-                featuredImage {
-                    node {
-                        sourceUrl
-                    }
-                }
-                tags {
-                    nodes {
-                        name
-                    }
-                }
-                date
-                id
-            }
-        }
+        ${menu}
+        ${themeSettings}
+        ${homePage}
+        ${podcasts}
+        ${posts}
     }
 `;
 export default home;

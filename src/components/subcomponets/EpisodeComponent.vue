@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import dayjs from 'dayjs';
-import {computed} from 'vue';
+
 const props = defineProps({
   data : {
     required: true

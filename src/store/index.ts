@@ -34,7 +34,8 @@ const store = createStore({
                     title:''
                 }
             },
-            podcasts:[]
+            podcasts:[],
+            posts:[]
         }
     },
     mutations: {
@@ -53,6 +54,10 @@ const store = createStore({
         setPodcast (state, payload){
             // @ts-ignore
             state.podcasts = payload;
+        },
+        setPosts(state, payload){
+            // @ts-ignore
+            state.posts = payload;
         }
     },
     actions: {
@@ -63,7 +68,8 @@ const store = createStore({
                     commit('setMenu', value.menu);
                     commit('setOptionPage', value.themeGeneralSettings.generalOption);
                     commit('setHome', value.nodeByUri);
-                    commit('setPodcast', value.podcasts)
+                    commit('setPodcast', value.podcasts);
+                    commit('setPosts', value.posts)
                 })
 
             } catch (error){
@@ -87,6 +93,10 @@ const store = createStore({
         getPodcasts (state){
             // @ts-ignore
             return state.podcasts
+        },
+        getPosts (state){
+            // @ts-ignore
+            return state.posts
         }
     }
 });
