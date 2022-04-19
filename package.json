@@ -22,7 +22,6 @@
     "dayjs": "^1.11.1",
     "graphql": "^16.3.0",
     "graphql-tag": "^2.12.6",
-    "lightgallery": "^2.4.0",
     "remove": "^0.1.5",
     "vue": "^3.2.25",
     "vue-easy-lightbox": "^1.4.1",
