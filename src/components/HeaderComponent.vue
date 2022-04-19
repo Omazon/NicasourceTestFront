@@ -15,7 +15,6 @@ const optionPage = computed(()=>{
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container py-lg-4">
       <a class="navbar-brand position-lg-absolute" href="#">
-<!--        <img src="../assets/logo.png" class="img-fluid" alt="Logo">-->
         <img :src="optionPage.logo.sourceUrl" class="img-fluid" alt="Logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">

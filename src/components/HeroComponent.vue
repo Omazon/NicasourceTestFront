@@ -29,14 +29,14 @@ const logoPod = computed(()=>{
             <div class="red-line-title ms-1"></div>
           </div>
           <div class="d-flex flex-wrap justify-content-between">
-            <a href="#" class="hover-shadow">
-              <img :src="logoPod.spotify.sourceUrl" alt="spotify">
+            <a :href="logoPod.spotify" class="hover-shadow">
+              <img src="src/assets/listenSpotify.jpg" alt="spotify">
             </a>
-            <a href="#" class="hover-shadow">
-              <img :src="logoPod.google.sourceUrl" alt="google">
+            <a :href="logoPod.google" class="hover-shadow">
+              <img src="src/assets/listenApple.jpg" alt="google">
             </a>
-            <a href="#" class="hover-shadow">
-              <img :src="logoPod.apple.sourceUrl" alt="apple">
+            <a :href="logoPod.apple" class="hover-shadow">
+              <img src="src/assets/listenApple.jpg" alt="apple">
             </a>
           </div>
         </div>

@@ -1,15 +1,21 @@
 const homePage = `
 nodeByUri(uri: "/") {
-            ... on Page {
-                id
-                hero {
-                    description
-                    rightImage {
-                        sourceUrl
-                    }
-                    title
-                }
+    ... on Page {
+        id
+        hero {
+            description
+            rightImage {
+                sourceUrl
             }
+            title
         }
+        gallery {
+        image {
+          sourceUrl(size: MEDIUM)
+          mediaItemUrl
+        }
+      }
+    }
+}
 `;
 export default homePage;

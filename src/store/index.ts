@@ -15,15 +15,14 @@ const store = createStore({
                 logo:{
                     sourceUrl:''
                 },
-                spotify:{
-                    sourceUrl:''
-                },
-                apple:{
-                    sourceUrl:''
-                },
-                google:{
-                    sourceUrl:''
-                },
+                spotify: '',
+                apple: '',
+                google: '',
+                footerText: '',
+                instagram: '',
+                linkedin: '',
+                skype: '',
+                facebook: '',
             },
             home:{
                 hero:{
@@ -32,6 +31,9 @@ const store = createStore({
                         sourceUrl: ''
                     },
                     title:''
+                },
+                gallery:{
+                    image:[]
                 }
             },
             podcasts:[],
@@ -89,6 +91,10 @@ const store = createStore({
         getHero(state){
             // @ts-ignore
             return state.home.hero
+        },
+        getGallery(state){
+          // @ts-ignore
+            return state.home.gallery
         },
         getPodcasts (state){
             // @ts-ignore
